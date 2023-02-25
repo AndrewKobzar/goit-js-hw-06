@@ -1,6 +1,6 @@
 const form = document.querySelector('.login-form')
-form.addEventListener('submit', x)
-function x(event) {
+form.addEventListener('submit', control)
+function control(event) {
     event.preventDefault()
     const {
         elements: { email, password },
@@ -9,8 +9,8 @@ function x(event) {
     if (email.value === '' || password.value === '') {
         return alert('Все поля должны быть заполнены')
     }
-    const user = { email: email.value, Password: password.value }
+    const userDetails = { email: email.value, Password: password.value }
     
-    console.log(user)
+    console.log(userDetails)
     event.currentTarget.reset()
 }
